@@ -105,4 +105,4 @@ When you host this API (Vercel, Railway, Heroku, etc.), your server's IP becomes
 
 ---
 
-Built with 💜 by **Walter**
+Built by Waltuh 🥀
