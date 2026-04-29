@@ -2,13 +2,16 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Install Flask
-RUN pip install --no-cache-dir flask
+# Copy requirements first for better caching
+COPY requirements.txt .
+
+# Install dependencies
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy application files
 COPY server.py index.html ./
 
-# Expose port
+# Expose port (Koyeb will use PORT env var, but we document 5555 as default)
 EXPOSE 5555
 
 # Run the application
