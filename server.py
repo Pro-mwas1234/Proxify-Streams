@@ -75,3 +75,6 @@ def get_proxy(data=None):
 
 if __name__ == '__main__':
     app.run(port=5555, debug=True)
+
+# Vercel deployment
+app = app
